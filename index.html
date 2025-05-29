@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="En">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Elle indique à Internet Explorer d’utiliser le moteur de rendu le plus récent -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Elle permet à ta page web de s’adapter aux écrans des appareils mobiles (responsive design).-->
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+  <title>Hachim Mohammed</title>
+  <meta name="description" content="Portfolio" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="main-header__logo-container">
+      <div class="main-header__logo-img-cont">
+        <img
+          src="moi2.jpeg"
+          alt="logo Image" class="main-header__logo-img" />
+      </div>
+      <h4 class="main-header__logo-text neon-box">HACHIM Mohammed</h4>
+    </div>
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-links">
+        <li class="main-header__navigation-link neon-box"><a href="./index.html"> Accueil </a></li>
+        <li class="main-header__navigation-link neon-box"><a href="./index.html#about"> À propos </a></li>
+        <li class="main-header__navigation-link neon-box">
+          <a href="./index.html#projects"> Projets </a>
+        </li>
+        <li class="main-header__navigation-link neon-box"><a href="./index.html#contact" href="">  Contact </a></li>
+      </ul>
+    </nav>
+    <div class="main-header__sm-scr-nav-btn">
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+    </div>
+    <div class="main-header__sm-menu">
+      <div class="main-header__sm-menu-close">
+
+      </div>
+      <ul class="main-header__sm-menu-links">
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Accueil</a>
+        </li>
+
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">À propos</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Projets</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+     <button class="btn btn-theme btn-sm" onclick="downloadFile('cv_HM.pdf')"> Télécharger CV </button>
+  </header>
+
+
+
+  <section id="home-hero" class="home-hero">
+    <div class="home-hero__content">
+      <div class="home-hero__info">
+        <h1 class="heading-primary home-hero__heading-primary">
+          <span class="heading-primary__sm"> Hello 👋</span>
+          <span class="heading-primary__main">
+            Hachim Mohammed, étudiant en BUT Informatique à la Sorbonne Paris Nord. Je cherche une alternance pour mettre en pratique et développer mes compétences en web et logiciel.
+
+
+          </span>
+        </h1>
+         <button class="btn btn-theme home-hero__btn-theme" onclick="scrollToSection('projects')">Projets</button>
+         <button class="btn btn-inv home-hero__btn-theme" onclick="scrollToSection('contact')">Contact</button> 
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> À propos 🦄</span>
+        <span class="heading-secondary__main">
+          Vous trouverez ici plus d'informations sur moi, ce que je fais, ainsi qu'une liste de mes compétences actuelles en programmation.
+      </h2>
+      <div class="main-section__content">
+        <div class="about__info">
+          <div class="about__main-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              Mon histoire
+            </h3>
+            <p class="text-primary about__text-primary">
+              <span>
+                Depuis tout petit, j’ai toujours été fasciné par le fonctionnement des objets. Je démontais les télécommandes et jouets électroniques pour comprendre leur intérieur. Cette curiosité m’a naturellement orienté vers l’informatique. Aujourd’hui, je souhaite transformer cette passion en compétences concrètes et contribuer à des projets innovants.
+              </span>
+              <span>
+                C’est pourquoi j’ai choisi le BUT Informatique à l’université Sorbonne Paris Nord (Paris 13), un parcours technique et professionnalisant qui me permet d’acquérir de solides bases en programmation, architecture des systèmes et gestion de projet.  Cet environnement stimulant favorise l’excellence et m’aide à atteindre mes objectifs professionnels.
+              </span>
+              <span>
+                Cet environnement stimulant favorise l’excellence et m’aide à atteindre mes objectifs professionnels.
+
+                Je cherche désormais une alternance pour approfondir mes compétences et progresser.
+              </span>
+            </p>
+            <button class="btn btn-theme about__btn-theme"><a  href="./index.html#projects">Projects</a></button>
+          </div>
+          <div class="about__skill-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              Mes compétences
+            </h3>
+            <ul class="about__skills">
+              <li class="about__skill back">java</li>
+              <li class="about__skill back">python</li>
+              <li class="about__skill back">C</li>
+              <li class="about__skill back">html</li>
+              <li class="about__skill back">css</li>
+              <li class="about__skill back">javascript</li>
+              <li class="about__skill back">Bootstrap</li>
+              <li class="about__skill back">Notion en Angular</li>
+              <li class="about__skill back">Figma</li>
+              <li class="about__skill back">PostgreSQL/MySQL</li>
+              <li class="about__skill back">Git</li>
+              <li class="about__skill back">RISC</li>
+              <li class="about__skill back">Looping</li>
+              <li class="about__skill back">Marionnet</li>
+              
+              
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills-showcase">
+    <ul class="skills-showcase__list">
+      <li class="skills-showcase__list-item back"data-skill="HTML">
+        <i class="devicon-html5-plain "></i>
+      </li>
+      <li class="skills-showcase__list-item back" data-skill="CSS">
+        <i class="devicon-css3-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item back"data-skill="Javascript">
+        <i class="devicon-javascript-plain"></i>
+      </li>
+      
+      <li class="skills-showcase__list-item back"data-skill="Git">
+        <i class="devicon-git-plain"></i>
+      </li>
+
+      
+      <li class="skills-showcase__list-item back"data-skill="Python">
+        <i class="devicon-python-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item back"data-skill="JAVA">
+        <i class="devicon-java-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item back"data-skill="C">
+        <i class="devicon-c-plain"></i>
+      </li>
+
+      <li class="skills-showcase__list-item back"data-skill="PostgreSQL">
+        <i class="devicon-postgresql-plain"></i>
+
+      </li>
+    </ul>
+  </section>
+  <section id="projects" class="projects main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> Projets 🛠️</span>
+        <span class="heading-secondary__main">
+          Vous trouverez ici certains des projets que j'ai réalisés, avec les détails de chaque projet.
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="projects__list">
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 1 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="projet1.png" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Background Generator
+              </h3>
+              
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  J'ai développé une page génératrice de backgrounds où, dès l’accès, l’utilisateur peut choisir différentes maquettes de couleurs.
+                   Il sélectionne les couleurs qu’il souhaite mélanger et visualise directement le résultat de leur combinaison.
+                    La page affiche ensuite le code RGB correspondant, facilitant ainsi le travail des développeurs.
+                     Ce projet est particulièrement utile pour trouver les meilleures harmonies de couleurs à utiliser en CSS.
+                </span>
+               
+                 <span>
+                  Pour tester la page, cliquez simplement sur <b>Tester</b>.
+                </span> 
+              </p>
+              <button onclick="window.open('joueurs.html', 'blank')" class="btn btn-theme projects__btn-theme">
+               Tester
+              </button>
+              
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="projet2.jpeg" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Modélisation et peuplement d’une base de données de réseau social
+              </h3>
+           
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                Projet académique en groupe où j’ai assuré le rôle de chef de projet. 
+                À partir d’un fichier Excel, nous avons conçu un MEA structurant les données d’un réseau social.
+                 J’ai développé un script Python pour générer les requêtes SQL et peupler la base de données.
+                  Le projet comprend des visualisations interactives accompagnées d’analyses, facilitant la compréhension des comportements des utilisateurs.
+                </span>
+                <span>
+                 Pour consulter le code utilisé,appuyez sur <b>Code</b>. Pour consulter le rapport des analyses, appuyez sur <b>Rapport</b>.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme" onclick="downloadFile('projet2_2.pdf')">
+                Analyses 
+              </button>
+              <button class="btn btn-inv projects__btn-inv " onclick="downloadFile('projet2.pdf')">Code + visualisation</button>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 2 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 3 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="projet3.png" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Création de base de données
+              </h3>
+              
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  Ce projet porte sur la modélisation et la gestion d’une base de données dédiée aux catastrophes climatiques.
+                   La conception a été réalisée avec MySQL Workbench pour créer un schéma clair et structuré.
+                    L’implémentation a ensuite été effectuée sous PostgreSQL, garantissant fiabilité et performance.
+                     La base de données a été peuplée avec des données réelles pour permettre des analyses approfondies.
+                      Cette solution facilite l’étude et le suivi des événements climatiques extrêmes.
+                </span>
+              
+                <span>
+                  Pour plus d’informations, vous pouvez consulter mon rapport sur ce projet.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme" onclick="downloadFile('Rapport_3.pdf')">
+                Rapport du projet 
+              </button>
+              
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="Projet4.webp" alt="Project Image" class="projects__list-item-img back" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Analyse de données d’un réseau social simulé avec Python
+              </h3>
+              
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                 Projet réalisé en binôme dans le cadre de mon BUT Informatique. 
+                 Développement d’un programme en Python permettant de modéliser un réseau social, 
+                 analyser les relations entre individus et identifier des groupes d’amis (communautés) à l’aide d’algorithmes personnalisés.
+                  Le projet utilise des structures de données efficaces et intègre des tests pour valider le bon fonctionnement de chaque fonction.
+
+
+                </span>
+              
+                <span>
+                  Pour voir le rapport et le code,cliquez sur le bouton <b>Code</b>.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme" onclick="downloadFile('Projet4.pdf')">
+                Code
+              </button>
+              
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 4 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Contact 📞</span>
+        <span class="heading-secondary__main">
+          N'hésitez pas à me contacter en remplissant le formulaire ci-dessous, et je vous répondrai dès que possible.
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="contact__form-cont">
+          <form action="https://formspree.io/f/xgvozngz" method="POST" class="contact__form">
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Nom</label>
+              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Email</label>
+              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Message</label>
+              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
+                class="contact__form-field-input"></textarea>
+            </div>
+            <button type="submit" class="contact__form-submit">Envoyer</button>
+          </form>
+          <div class="contact__form-visual"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="main-footer__upper">
+      <div class="main-container">
+        <ul class="main-footer__links">
+          <li class="main-footer__link neon-box">
+            <a href="./index.html">Accueil</a>
+          </li>
+          <li class="main-footer__link neon-box">
+            <a href="./index.html#about">À propos</a>
+          </li>
+          <li class="main-footer__link neon-box">
+            <a href="./index.html#projects">Projets</a>
+          </li>
+          <li class="main-footer__link neon-box">
+            <a href="./index.html#contact ">Contact</a>
+          </li>
+        </ul>
+        <div class="main-footer__mid-line"></div>
+        <div class="main-footer__socials">
+  
+        <a href="#" class="main-footer__social-link neon-box2">
+        <img
+          src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
+              alt="GitHub" class="main-footer__social-link-icon" />
+                </a>
+
+  
+          <a href="https://www.linkedin.com/in/mohahac/" target="_blank" class="main-footer__social-link neon-box2">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
+                alt="LinkedIn" class="main-footer__social-link-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="portfolio.js"></script>
+</body>
+
+</html>
