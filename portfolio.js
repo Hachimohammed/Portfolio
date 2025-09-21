@@ -1,3 +1,51 @@
+(function(){
+  const loader = document.getElementById('loader');
+  const main = document.getElementById('main-content');
+
+  
+  if (sessionStorage.getItem('loaderShown') === 'true') {
+    if (loader) loader.style.display = 'none';
+    if (main) main.style.display = 'block';
+    return;
+  }
+
+  const VISIBLE_MS = 2000;   
+  const FADE_MS = 900;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const visible = prefersReduced ? 800 : VISIBLE_MS;
+
+  function finishLoad() {
+    if(!loader || !main) return;
+    loader.classList.add('fade');
+    setTimeout(() => {
+      if(loader) loader.style.display = 'none';
+      if(main) main.style.display = 'block';
+      try { sessionStorage.setItem('loaderShown','true'); } catch(e) {}
+      const firstHeading = main.querySelector('h1, h2, header, main');
+      if(firstHeading) {
+        firstHeading.setAttribute('tabindex', '-1');
+        firstHeading.focus();
+      }
+    }, FADE_MS);
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(finishLoad, visible);
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(finishLoad, visible);
+    });
+  }
+
+
+  setTimeout(() => {
+    if(loader && loader.style.display !== 'none') finishLoad();
+  }, 9000);
+})();
+
+
+
 const smMenuBtn = document.querySelector('.main-header__sm-scr-nav-btn')
 const smMenu = document.querySelector('.main-header__sm-menu')
 const smMenuCloseBtn = document.querySelector('.main-header__sm-menu-close')
@@ -77,18 +125,11 @@ smMenuCloseBtn.addEventListener('click', () => {
   smMenu.classList.remove('main-header__sm-menu--active')
 })
 
-
-
-
-
-// ---
 const themeColorSelector = document.querySelector('.themeClrSelector')
 const themeColorSelectorInput = document.querySelector(
   '.themeClrSelector__input'
 )
 const root = document.documentElement;
-
-
 
 const hexToRgb = (hex) => {
   let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -116,9 +157,7 @@ themeColorSelector.addEventListener('click', () => {
 })
 
 const setDynamicColor = (color) => {
-
   const { r, g, b } = hexToRgb(`${color}`)
-  
   root.style.setProperty('--themeColor', `${r},${g},${b}`);
   localStorage.setItem('color', color)
 }
@@ -132,22 +171,20 @@ if (localStorage.getItem('color')) {
     themeColorSelectorInput.value = userSelectedColor
      setDynamicColor(userSelectedColor)}
 
-
-
 const headerLogoConatiner = document.querySelector('.main-header__logo-container')
 
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
- function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
 
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-   function downloadFile(filename) {
+function downloadFile(filename) {
   const link = document.createElement('a');
   link.href = filename;
   link.download = filename;
@@ -155,3 +192,4 @@ headerLogoConatiner.addEventListener('click', () => {
   link.click();
   document.body.removeChild(link);
 }
+
